@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1> HELLO WORLD</h1>
+    <h3>Liste de mes langages de programmation: </h3>
+      <ol>
+        {% for lan in maliste %}
+
+            {% if lan == 'python' %}
+
+                <li><em>{{ lan|upper }}</em></li>
+
+            {% else %}
+
+                <li>{{ lan|safe }}</li>
+
+            {% endif %}
+
+        {% endfor%}
+      </ol>
+      <p> mon préféré est {{ maliste.0|upper }}</p>
+  </body>
+</html>
